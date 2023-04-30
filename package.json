@@ -68,6 +68,7 @@
   "man": "gulp.1",
   "files": [
     "index.mjs",
+    "where-am-i.mjs",
     "lib",
     "bin",
     "completion",
