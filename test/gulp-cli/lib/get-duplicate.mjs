@@ -26,21 +26,19 @@ const NODE_FACTORY = {
 }
 
 describe('./lib/get-duplicate', () => {
-  it('Should duplicate an empty tree', (done) => {
+  it('duplicates an empty tree', () => {
     const srcTree = {}
     const cliProps = {}
-    const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+    const newTree = getDuplicate(srcTree, cliProps)
 
     expect(newTree)
       .to.eql({ nodes: [] })
 
     expect(newTree)
       .not.to.eql(srcTree)
-
-    done()
   })
 
-  it('Should duplicate a tree with empty nodes', (done) => {
+  it('duplicates a tree with empty nodes', () => {
     const srcTree = {
       nodes: [
         {},
@@ -54,7 +52,7 @@ describe('./lib/get-duplicate', () => {
       ]
     }
     const cliProps = {}
-    const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+    const newTree = getDuplicate(srcTree, cliProps)
 
     expect(newTree)
       .to.eql({
@@ -72,11 +70,9 @@ describe('./lib/get-duplicate', () => {
 
     expect(newTree)
       .not.to.eql(srcTree)
-
-    done()
   })
 
-  it('Should duplicate a tree', async () => {
+  it('duplicates a tree', async () => {
     const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
     const cliProps = {}
     const newTree = getDuplicate(srcTree, cliProps, NODE_FACTORY)
@@ -85,7 +81,7 @@ describe('./lib/get-duplicate', () => {
       .to.eql(srcTree)
   })
 
-  it('Should duplicate a tree without `nodeFactory`', async () => {
+  it('duplicates a tree without `nodeFactory`', async () => {
     const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
     const cliProps = {}
     const newTree = getDuplicate(srcTree, cliProps)
@@ -94,7 +90,7 @@ describe('./lib/get-duplicate', () => {
       .to.eql(srcTree)
   })
 
-  it('Should duplicate a tree without `cliProps` and without `nodeFactory`', async () => {
+  it('duplicates a tree without `cliProps` and without `nodeFactory`', async () => {
     const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
     const newTree = getDuplicate(srcTree)
 
@@ -102,13 +98,13 @@ describe('./lib/get-duplicate', () => {
       .to.eql(srcTree)
   })
 
-  describe('cliProps.tasksDepth', () => {
+  describe('`cliProps.tasksDepth`', () => {
     describe('Duplicating a tree where the specified depth is a number', () => {
-      it('Should duplicate a tree to depth 1 if the specified depth is 0', async () => {
+      it('duplicates a tree to depth 1 if the specified depth is 0', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-1.json')
         const cliProps = { tasksDepth: 0 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -117,11 +113,11 @@ describe('./lib/get-duplicate', () => {
           .not.to.eql(srcTree)
       })
 
-      it('Should duplicate a tree to depth 1 if the specified depth is 1', async () => {
+      it('duplicates a tree to depth 1 if the specified depth is 1', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-1.json')
         const cliProps = { tasksDepth: 1 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -130,11 +126,11 @@ describe('./lib/get-duplicate', () => {
           .not.to.eql(srcTree)
       })
 
-      it('Should duplicate a tree to depth 2 if the specified depth is 2', async () => {
+      it('duplicates a tree to depth 2 if the specified depth is 2', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-2.json')
         const cliProps = { tasksDepth: 2 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -143,11 +139,11 @@ describe('./lib/get-duplicate', () => {
           .not.to.eql(srcTree)
       })
 
-      it('Should duplicate a tree to depth 3 if the specified depth is 3', async () => {
+      it('duplicates a tree to depth 3 if the specified depth is 3', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-3.json')
         const cliProps = { tasksDepth: 3 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -156,11 +152,11 @@ describe('./lib/get-duplicate', () => {
           .not.to.eql(srcTree)
       })
 
-      it('Should duplicate a tree to depth 4 if the specified depth is 4', async () => {
+      it('duplicates a tree to depth 4 if the specified depth is 4', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-4.json')
         const cliProps = { tasksDepth: 4 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -169,11 +165,11 @@ describe('./lib/get-duplicate', () => {
           .to.eql(srcTree)
       })
 
-      it('Should duplicate a tree if the specified depth is greater than its actual depth', async () => {
+      it('duplicates a tree if the specified depth is greater than its actual depth', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-4.json')
         const cliProps = { tasksDepth: 5 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -182,11 +178,11 @@ describe('./lib/get-duplicate', () => {
           .to.eql(srcTree)
       })
 
-      it('Should duplicate a tree to depth 1 if the specified depth is less than 1', async () => {
+      it('duplicates a tree to depth 1 if the specified depth is less than 1', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-1.json')
         const cliProps = { tasksDepth: -1 }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -197,11 +193,11 @@ describe('./lib/get-duplicate', () => {
     })
 
     describe('Duplicating a tree where the specified depth is not a number', () => {
-      it('Should duplicate a tree if the specified depth is null', async () => {
+      it('duplicates a tree if the specified depth is null', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-4.json')
         const cliProps = { tasksDepth: null }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -210,11 +206,11 @@ describe('./lib/get-duplicate', () => {
           .to.eql(srcTree)
       })
 
-      it('Should duplicate a tree if the specified depth is a string', async () => {
+      it('duplicates a tree if the specified depth is a string', async () => {
         const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
         const expectedTree = await getFixture('./test/expected/get-duplicate/tree-depth-4.json')
         const cliProps = { tasksDepth: 'A' }
-        const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+        const newTree = getDuplicate(srcTree, cliProps)
 
         expect(newTree)
           .to.eql(expectedTree)
@@ -225,12 +221,12 @@ describe('./lib/get-duplicate', () => {
     })
   })
 
-  describe('cliProps.compactTasks', () => {
-    it('Should duplicate nodes only where `.branch` is true in the node or its ancestors', async () => {
+  describe('`cliProps.compactTasks`', () => {
+    it('duplicates nodes only where `.branch` is true in the node or its ancestors', async () => {
       const srcTree = await getFixture('./test/fixtures/get-duplicate.json')
       const expectedTree = await getFixture('./test/expected/get-duplicate/tree-compact.json')
       const cliProps = { compactTasks: true }
-      const newTree = getDuplicate(srcTree, cliProps) // , NODE_FACTORY)
+      const newTree = getDuplicate(srcTree, cliProps)
 
       expect(newTree)
         .to.eql(expectedTree)

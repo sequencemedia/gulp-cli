@@ -28,7 +28,9 @@ describe('--tasks-json', () => {
         expect(stdout)
           .to.match(TASKS_PATTERN)
 
-        const [match] = stdout.match(TASKS_PATTERN)
+        const [
+          match
+        ] = stdout.match(TASKS_PATTERN)
 
         const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-json.json')
 
@@ -52,7 +54,9 @@ describe('--tasks-json', () => {
           expect(stdout)
             .to.match(TASKS_PATTERN)
 
-          const [match] = stdout.match(TASKS_PATTERN)
+          const [
+            match
+          ] = stdout.match(TASKS_PATTERN)
 
           const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-json/compact-tasks.json')
 

@@ -12,7 +12,7 @@ import {
 
 const TASKS_PATTERN = /Label of node [^,']*\n/
 
-const TIMESTAMP_PATTERN = /\[.*\]/
+const TIMESTAMP_PATTERN = /\[.*\]/g
 
 describe('--tasks-list', () => {
   it('prints the tasks', (done) => {
@@ -24,11 +24,13 @@ describe('--tasks-list', () => {
         expect(stdout)
           .to.match(TASKS_PATTERN)
 
-        const [match] = stdout.match(TASKS_PATTERN)
+        const [
+          match
+        ] = stdout.match(TASKS_PATTERN)
 
         const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-list.txt')
 
-        expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+        expect(match.replace(TIMESTAMP_PATTERN, ''))
           .to.equal(TASKS_FIXTURE.toString())
 
         done()
@@ -48,11 +50,13 @@ describe('--tasks-list', () => {
           expect(stdout)
             .to.match(TASKS_PATTERN)
 
-          const [match] = stdout.match(TASKS_PATTERN)
+          const [
+            match
+          ] = stdout.match(TASKS_PATTERN)
 
           const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-list/compact-tasks.txt')
 
-          expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+          expect(match.replace(TIMESTAMP_PATTERN, ''))
             .to.equal(TASKS_FIXTURE.toString())
 
           done()

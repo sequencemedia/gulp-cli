@@ -7,7 +7,7 @@ const {
 } = chai
 
 describe('./lib/config/cli-flags', () => {
-  it('Should copy only config props specified to cli flags', (done) => {
+  it('copies only config props specified to cli flags', () => {
     const configProps = {
       description: 'Description',
       flags: {
@@ -22,11 +22,9 @@ describe('./lib/config/cli-flags', () => {
         silent: true,
         continue: true
       })
-
-    done()
   })
 
-  it('Should not override cli flags with config props', (done) => {
+  it('does not override cli flags with config props', () => {
     const cliProps = {
       help: false,
       depth: 4,
@@ -50,11 +48,9 @@ describe('./lib/config/cli-flags', () => {
         silent: true,
         tasks: false
       })
-
-    done()
   })
 
-  it('Should not cause error if config is empty', (done) => {
+  it('does not throw if config is empty', () => {
     const cliProps = {
       help: false,
       depth: 4,
@@ -69,7 +65,5 @@ describe('./lib/config/cli-flags', () => {
         silent: true,
         tasks: false
       })
-
-    done()
   })
 })

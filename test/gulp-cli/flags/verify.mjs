@@ -12,6 +12,7 @@ describe('--verify', () => {
       try {
         expect(e)
           .to.be.null
+
         expect(stdout)
           .to.include('Verifying dependencies')
 

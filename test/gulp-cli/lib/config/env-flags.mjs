@@ -7,7 +7,7 @@ const {
 } = chai
 
 describe('./lib/config/env-flags', () => {
-  it('Should copy only config props specified to env flags', (done) => {
+  it('copies only config props specified to env flags', () => {
     const configProps = {
       description: 'Description',
       flags: {
@@ -21,11 +21,9 @@ describe('./lib/config/env-flags', () => {
         configPath: '/path/to/gulpfile',
         configBase: '/path/to'
       })
-
-    done()
   })
 
-  it('Should skip gulpfile from config props if defined in cli flags', (done) => {
+  it('skips gulpfile from config props if defined in cli flags', () => {
     const envProps = {
       cwd: '/path/to/cwd',
       require: 'preload',
@@ -61,11 +59,9 @@ describe('./lib/config/env-flags', () => {
         modulePackage: { name: 'modulePackage' },
         configFiles: { etc: {} }
       })
-
-    done()
   })
 
-  it('Should copy gulpfile from config props if undefined in cli flags', (done) => {
+  it('copies gulpfile from config props if undefined in cli flags', () => {
     const envProps = {
       cwd: '/path/to/cwd',
       require: 'preload',
@@ -97,11 +93,9 @@ describe('./lib/config/env-flags', () => {
         modulePackage: { name: 'modulePackage' },
         configFiles: { etc: {} }
       })
-
-    done()
   })
 
-  it('Should not cause error if config props is empty', (done) => {
+  it('does not throw if config props is empty', () => {
     const envProps = {
       cwd: '/path/to/cwd',
       require: 'preload',
@@ -124,7 +118,5 @@ describe('./lib/config/env-flags', () => {
         modulePackage: { name: 'modulePackage' },
         configFiles: { etc: {} }
       })
-
-    done()
   })
 })

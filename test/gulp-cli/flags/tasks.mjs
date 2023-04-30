@@ -12,7 +12,7 @@ import {
 
 const TASKS_PATTERN = /\[.*\] .* Label of node .*\s+(?:\[.*\] .*\s+)*\[.*\] .* Label of node .*\s+/
 
-const TIMESTAMP_PATTERN = /\[.*\]/
+const TIMESTAMP_PATTERN = /\[.*\]/g
 
 describe('--tasks', () => {
   it('prints the tasks', (done) => {
@@ -30,11 +30,13 @@ describe('--tasks', () => {
         expect(stdout)
           .to.match(TASKS_PATTERN)
 
-        const [match] = stdout.match(TASKS_PATTERN)
+        const [
+          match
+        ] = stdout.match(TASKS_PATTERN)
 
         const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks.txt')
 
-        expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+        expect(match.replace(TIMESTAMP_PATTERN, ''))
           .to.equal(TASKS_FIXTURE.toString())
 
         done()
@@ -60,11 +62,13 @@ describe('--tasks', () => {
           expect(stdout)
             .to.match(TASKS_PATTERN)
 
-          const [match] = stdout.match(TASKS_PATTERN)
+          const [
+            match
+          ] = stdout.match(TASKS_PATTERN)
 
           const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks/compact-tasks.txt')
 
-          expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+          expect(match.replace(TIMESTAMP_PATTERN, ''))
             .to.equal(TASKS_FIXTURE.toString())
 
           done()
@@ -90,11 +94,13 @@ describe('--tasks', () => {
             expect(stdout)
               .to.match(TASKS_PATTERN)
 
-            const [match] = stdout.match(TASKS_PATTERN)
+            const [
+              match
+            ] = stdout.match(TASKS_PATTERN)
 
             const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks/compact-tasks/sort-tasks.txt')
 
-            expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+            expect(match.replace(TIMESTAMP_PATTERN, ''))
               .to.equal(TASKS_FIXTURE.toString())
 
             done()
@@ -122,11 +128,13 @@ describe('--tasks', () => {
           expect(stdout)
             .to.match(TASKS_PATTERN)
 
-          const [match] = stdout.match(TASKS_PATTERN)
+          const [
+            match
+          ] = stdout.match(TASKS_PATTERN)
 
           const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks/sort-tasks.txt')
 
-          expect(match.replace(new RegExp(TIMESTAMP_PATTERN, 'g'), ''))
+          expect(match.replace(TIMESTAMP_PATTERN, ''))
             .to.equal(TASKS_FIXTURE.toString())
 
           done()

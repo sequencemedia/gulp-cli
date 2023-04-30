@@ -13,11 +13,13 @@ describe('--silent', () => {
         expect(e)
           .to.be.null
 
-        expect(stdout)
-          .to.include('')
+        console.log(stdout)
 
         expect(stdout)
-          .to.include('')
+          .to.equal('')
+
+        expect(stdout)
+          .to.equal('')
 
         done()
       } catch (e) {
