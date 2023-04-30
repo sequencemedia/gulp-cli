@@ -1,6 +1,7 @@
 {
   "name": "@sequencemedia/gulp-cli",
   "version": "1.0.0",
+  "type": "module",
   "description": "Command line interface for gulp",
   "keywords": [
     "build",
@@ -11,7 +12,7 @@
     "asset",
     "pipeline"
   ],
-  "main": "./index.js",
+  "main": "./index.mjs",
   "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
   "contributors": [
     "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)"
@@ -23,12 +24,12 @@
   "repository": "sequencemedia/gulp-cli",
   "homepage": "https://gulpjs.com",
   "scripts": {
-    "lint": "eslint . --ext .mjs --ext .cjs --ext .js",
+    "lint": "eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
-    "test": "mocha --timeout 5000 --recursive test/gulp-cli"
+    "test": "NODE_OPTIONS=--no-warnings mocha -b --recursive test/gulp-cli"
   },
   "bin": {
-    "gulp": "bin/gulp.js"
+    "gulp": "bin/gulp.mjs"
   },
   "dependencies": {
     "@sequencemedia/liftoff": "sequencemedia/liftoff",
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.5",
     "@babel/eslint-parser": "^7.21.3",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
     "@babel/preset-env": "^7.21.5",
     "chai": "^4.3.7",
     "eslint": "^8.39.0",
@@ -65,10 +67,15 @@
   },
   "man": "gulp.1",
   "files": [
-    "index.js",
+    "index.mjs",
     "lib",
     "bin",
     "completion",
     "gulp.1"
-  ]
+  ],
+  "imports": {
+    "#gulp-cli/lib/*": "./lib/*.mjs",
+    "#gulp-cli": "./index.mjs",
+    "#where-am-i": "./where-am-i.mjs"
+  }
 }
