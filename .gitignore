@@ -1,17 +1,22 @@
 .DS_Store
-*.log
-node_modules
-!test/fixtures/errors/bad-gulp-version/node_modules/
-build
-*.node
-components
-coverage
-.coveralls.yml
-.nyc_output
-*.orig
-.idea
-sandbox
-test/out-fixtures/*
-test/output/
-test/watch-*.txt
+
+**/node_modules/*
+**/npm-debug.log
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc
+
+# Deps
+.depsrc
+
+!test/**/node_modules/
+
+test/out-fixtures
+test/output
+
 gulp.1
+
+.gulp.*

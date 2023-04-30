@@ -7,4 +7,4 @@
 #
 # gulp --completion=fish | source
 
-complete -c gulp -a "(gulp --tasks-simple)" -f
+complete -c gulp -a "(gulp --tasks-list)" -f

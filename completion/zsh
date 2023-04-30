@@ -17,7 +17,7 @@
 # Enable zsh autocompletion.
 function _gulp_completion() {
   # Grab tasks
-  compls=$(gulp --tasks-simple)
+  compls=$(gulp --tasks-list)
   completions=(${=compls})
   compadd -- $completions
 }

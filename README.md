@@ -168,7 +168,7 @@ __Some flags only work with gulp 4 and will be ignored when invoked against gulp
       <td>Print the task dependency tree for the loaded gulpfile.</td>
     </tr>
     <tr>
-      <td>--tasks-simple</td>
+      <td>--tasks-list</td>
       <td></td>
       <td>Print a plaintext list of tasks for the loaded gulpfile.</td>
     </tr>

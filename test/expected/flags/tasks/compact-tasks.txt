@@ -1,0 +1,14 @@
+ ├─┬ Label of node 3
+ │ ├─┬ Label of node 3.1
+ │ │ ├── Label of node 3.1.1
+ │ │ ├── Label of node 3.1.2
+ │ │ └── Label of node 3.1.3
+ │ └── Label of node 3.2
+ ├─┬ Label of node 2
+ │ ├── Label of node 2.1
+ │ ├─┬ Label of node 2.2
+ │ │ ├── Label of node 2.2.1
+ │ │ ├── Label of node 2.2.2
+ │ │ └── Label of node 2.2.3
+ │ └── Label of node 2.3
+ └── Label of node 1

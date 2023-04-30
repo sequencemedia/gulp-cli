@@ -1,2 +1,5 @@
-**/*.babel.js
-coverage
+.circleci
+.git
+.github
+.husky
+node_modules

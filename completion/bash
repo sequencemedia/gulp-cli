@@ -19,7 +19,7 @@ function _gulp_completions() {
   # The currently-being-completed word.
   local cur="${COMP_WORDS[COMP_CWORD]}"
   #Grab tasks
-  local compls=$(gulp --tasks-simple)
+  local compls=$(gulp --tasks-list)
   # Tell complete what stuff to show.
   COMPREPLY=($(compgen -W "$compls" -- "$cur"))
 }

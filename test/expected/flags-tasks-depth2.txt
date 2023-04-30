@@ -1,7 +1,0 @@
-gulp-cli/test/fixtures/gulpfiles
-├─┬ taskC
-│ └── <series>
-├─┬ taskB
-│ └── <parallel>
-└─┬ default
-  └── <parallel>

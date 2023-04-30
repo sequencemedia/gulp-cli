@@ -49,7 +49,7 @@ gulp has very few flags to know about. All other flags are for tasks to use if n
 **--tasks**, **-T**
     Print the task dependency tree for the loaded gulpfile.
 
-**--tasks-simple**
+**--tasks-list**
     Print a plaintext list of tasks for the loaded gulpfile.
 
 **--tasks-json** [path]

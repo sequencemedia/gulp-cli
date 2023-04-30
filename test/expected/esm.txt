@@ -1,3 +1,0 @@
-gulp-cli/test/fixtures/gulpfiles
-├── exported
-└── registered
