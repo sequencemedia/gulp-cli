@@ -85,8 +85,6 @@ cli.on('respawn', (nodeFlags, { pid }) => {
 })
 
 function execute (envProps, cliProps, configProps) {
-  console.log('@SequenceMedia/execute')
-
   /**
    * Does not depend on Gulp
    */
@@ -128,10 +126,8 @@ export default function prepare () {
     configPath: cliProps.gulpfile,
     require: cliProps.require,
     completion: cliProps.completion
-  }, (envProps) => {
-    console.log('@SequenceMedia/prepare')
-
-    const configProps = loadConfigFiles(envProps.configFiles['.gulp'], ['home', 'cwd'])
+  }, async (envProps) => {
+    const configProps = await loadConfigFiles(envProps.configFiles['.gulp'], ['home', 'cwd'])
 
     cliProps = mergeConfigToCliFlags(cliProps, configProps)
     envProps = mergeConfigToEnvFlags(envProps, configProps, cliProps)

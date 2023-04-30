@@ -1,4 +1,3 @@
-
 import {
   exec
 } from 'node:child_process'
@@ -10,8 +9,6 @@ import {
 describe('--verify', () => {
   it('verifies dependencies with a valid dependency', (done) => {
     exec('node ./bin/gulp.mjs --verify ./test/mocks/flags/verify/valid-package.json', (e, stdout) => {
-      console.log(e)
-
       try {
         expect(e)
           .to.be.null
