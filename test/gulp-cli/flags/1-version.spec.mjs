@@ -18,6 +18,9 @@ describe('--version', () => {
             .to.include('Gulp CLI version')
 
           expect(stdout)
+            .to.match(/\d+\.\d+\.\d+/)
+
+          expect(stdout)
             .to.include('Gulp version')
 
           expect(stdout)
@@ -39,6 +42,9 @@ describe('--version', () => {
 
             expect(stdout)
               .to.include('Gulp CLI version')
+
+            expect(stdout)
+              .to.match(/\d+\.\d+\.\d+/)
 
             expect(stdout)
               .to.include('Gulp version')
@@ -66,6 +72,9 @@ describe('--version', () => {
             .to.include('Gulp CLI version')
 
           expect(stdout)
+            .to.match(/\d+\.\d+\.\d+/)
+
+          expect(stdout)
             .to.include('Gulp version')
 
           expect(stdout)
@@ -87,6 +96,9 @@ describe('--version', () => {
 
             expect(stdout)
               .to.include('Gulp CLI version')
+
+            expect(stdout)
+              .to.match(/\d+\.\d+\.\d+/)
 
             expect(stdout)
               .to.include('Gulp version')

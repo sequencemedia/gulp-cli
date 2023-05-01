@@ -1,7 +1,6 @@
 {
   "name": "@sequencemedia/gulp-cli",
   "version": "1.0.0",
-  "type": "module",
   "description": "Command line interface for gulp",
   "keywords": [
     "build",
@@ -13,6 +12,7 @@
     "pipeline"
   ],
   "main": "./index.mjs",
+  "type": "module",
   "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
   "contributors": [
     "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)"
