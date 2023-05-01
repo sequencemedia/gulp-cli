@@ -26,7 +26,8 @@
   "scripts": {
     "lint": "eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
-    "test": "NODE_OPTIONS=--no-warnings mocha -b --recursive test/gulp-cli"
+    "test": "NODE_OPTIONS=--no-warnings mocha -b --recursive test/gulp-cli",
+    "prepare": "husky install"
   },
   "bin": {
     "gulp": "bin/gulp.mjs"
@@ -61,6 +62,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "expect": "^29.5.0",
+    "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.0",
     "sinon": "^15.0.4"
