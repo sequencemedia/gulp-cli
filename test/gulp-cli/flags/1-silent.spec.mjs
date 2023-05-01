@@ -13,7 +13,7 @@ describe('--silent', () => {
         expect(e)
           .to.be.null
 
-          /*
+        /*
         expect(stdout)
           .to.equal('')
 

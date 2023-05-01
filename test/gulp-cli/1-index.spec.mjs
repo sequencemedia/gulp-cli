@@ -1,6 +1,6 @@
 import {
   exec
- } from "node:child_process"
+} from 'node:child_process'
 
 import {
   expect
