@@ -33,7 +33,7 @@
     "gulp": "bin/gulp.mjs"
   },
   "dependencies": {
-    "@sequencemedia/liftoff": "sequencemedia/liftoff",
+    "@sequencemedia/liftoff": "1.0.0",
     "ansi-colors": "^4.1.3",
     "archy": "^1.0.0",
     "array-sort": "^1.0.0",
