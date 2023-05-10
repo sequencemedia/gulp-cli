@@ -12,7 +12,8 @@
 # Deps
 .depsrc
 
-!test/**/node_modules/
+!test/**/node_modules/*
+test/**/node_modules/**/.DS_Store
 
 gulp.1
 

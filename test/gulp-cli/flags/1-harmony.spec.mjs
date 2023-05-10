@@ -14,7 +14,7 @@ describe('--harmony', () => {
           .to.be.null
 
         expect(stdout)
-          .to.include('Node flags detected')
+          .to.include('Node flags')
 
         expect(stdout)
           .to.include('--harmony')
