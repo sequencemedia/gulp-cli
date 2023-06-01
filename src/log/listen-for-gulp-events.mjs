@@ -1,8 +1,8 @@
 import prettyHrtime from 'pretty-hrtime'
 
-import logger from '#gulp-cli/lib/logger'
-import ansi from '#gulp-cli/lib/ansi'
-import formatError from '#gulp-cli/lib/format-error'
+import logger from '#gulp-cli/src/logger'
+import ansi from '#gulp-cli/src/ansi'
+import formatError from '#gulp-cli/src/format-error'
 
 const errors = new Set()
 

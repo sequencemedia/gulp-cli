@@ -2,9 +2,9 @@ import {
   expect
 } from 'chai'
 
-import getProcessTitle from '#gulp-cli/lib/get-process-title'
+import getProcessTitle from '#gulp-cli/src/get-process-title'
 
-describe('./lib/get-process-title', () => {
+describe('./src/get-process-title', () => {
   describe('With args', () => {
     it('returns the command with empty args', () => {
       const title = getProcessTitle([])

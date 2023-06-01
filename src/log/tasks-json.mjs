@@ -2,7 +2,7 @@ import {
   writeFile
 } from 'node:fs/promises'
 
-import getDuplicate from '#gulp-cli/lib/get-duplicate'
+import getDuplicate from '#gulp-cli/src/get-duplicate'
 
 export default function logTasksJson (tree, cliProps) {
   const dupe = getDuplicate(tree, cliProps)

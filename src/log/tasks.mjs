@@ -3,9 +3,9 @@ import archy from 'archy'
 import sortBy from 'array-sort'
 import isObject from 'isobject'
 
-import logger from '#gulp-cli/lib/logger'
-import ansi from '#gulp-cli/lib/ansi'
-import getDuplicate from '#gulp-cli/lib/get-duplicate'
+import logger from '#gulp-cli/src/logger'
+import ansi from '#gulp-cli/src/ansi'
+import getDuplicate from '#gulp-cli/src/get-duplicate'
 
 function getLineInfoCollector (lineInfo) {
   return {

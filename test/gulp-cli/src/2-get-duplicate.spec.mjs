@@ -6,7 +6,7 @@ import {
   expect
 } from 'chai'
 
-import getDuplicate from '#gulp-cli/lib/get-duplicate'
+import getDuplicate from '#gulp-cli/src/get-duplicate'
 
 async function getFixture (filePath) {
   const fileData = await readFile(filePath)
@@ -25,7 +25,7 @@ const NODE_FACTORY = {
   }
 }
 
-describe('./lib/get-duplicate', () => {
+describe('./src/get-duplicate', () => {
   it('duplicates an empty tree', () => {
     const srcTree = {}
     const cliProps = {}

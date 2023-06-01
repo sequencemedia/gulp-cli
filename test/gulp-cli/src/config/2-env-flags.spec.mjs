@@ -1,11 +1,11 @@
 import chai from 'chai'
 
-import mergeConfig from '#gulp-cli/lib/config/env-flags'
+import mergeConfig from '#gulp-cli/src/config/env-flags'
 const {
   expect
 } = chai
 
-describe('./lib/config/env-flags', () => {
+describe('./src/config/env-flags', () => {
   it('copies only config props specified to env flags', () => {
     const configProps = {
       description: 'Description',

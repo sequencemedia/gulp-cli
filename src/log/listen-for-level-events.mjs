@@ -1,5 +1,5 @@
 import fancyLog from 'fancy-log'
-import logger from '#gulp-cli/lib/logger'
+import logger from '#gulp-cli/src/logger'
 
 const noop = () => {}
 

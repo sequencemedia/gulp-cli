@@ -1,5 +1,5 @@
-import logger from '#gulp-cli/lib/logger'
-import ansi from '#gulp-cli/lib/ansi'
+import logger from '#gulp-cli/src/logger'
+import ansi from '#gulp-cli/src/ansi'
 
 const tasks = new Map()
 

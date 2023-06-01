@@ -6,9 +6,9 @@ import {
   expect
 } from 'chai'
 
-import loadConfigFiles from '#gulp-cli/lib/config/load-files'
+import loadConfigFiles from '#gulp-cli/src/config/load-files'
 
-describe('./lib/config/load-files', () => {
+describe('./src/config/load-files', () => {
   describe('With valid arguments', () => {
     it('loads config files', async () => {
       const configFiles = {

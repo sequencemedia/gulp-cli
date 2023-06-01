@@ -7,23 +7,23 @@ import Liftoff from '@sequencemedia/liftoff'
 import interpret from 'interpret'
 import v8flags from 'v8flags'
 
-import logger from './lib/logger.mjs'
-import ansi from './lib/ansi.mjs'
-import exit from './lib/exit.mjs'
-import tildify from './lib/tildify.mjs'
-import getProcessTitle from './lib/get-process-title.mjs'
-import cliOptions from './lib/cli-options.mjs'
-import getCompletion from './lib/get-completion.mjs'
+import logger from './src/logger.mjs'
+import ansi from './src/ansi.mjs'
+import exit from './src/exit.mjs'
+import tildify from './src/tildify.mjs'
+import getProcessTitle from './src/get-process-title.mjs'
+import cliOptions from './src/cli-options.mjs'
+import getCompletion from './src/get-completion.mjs'
 
-import listenForLevelEvents from './lib/log/listen-for-level-events.mjs'
+import listenForLevelEvents from './src/log/listen-for-level-events.mjs'
 
-import loadConfigFiles from './lib/config/load-files.mjs'
-import mergeConfigToCliFlags from './lib/config/cli-flags.mjs'
-import mergeConfigToEnvFlags from './lib/config/env-flags.mjs'
+import loadConfigFiles from './src/config/load-files.mjs'
+import mergeConfigToCliFlags from './src/config/cli-flags.mjs'
+import mergeConfigToEnvFlags from './src/config/env-flags.mjs'
 
-import runVersion from './lib/run-version.mjs'
-import runVerify from './lib/run-verify.mjs'
-import run from './lib/index.mjs'
+import runVersion from './src/run-version.mjs'
+import runVerify from './src/run-verify.mjs'
+import run from './src/index.mjs'
 
 // Set env var for ORIGINAL cwd
 // before anything touches it
