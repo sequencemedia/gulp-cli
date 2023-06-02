@@ -71,7 +71,7 @@
   "files": [
     "index.mjs",
     "where-am-i.mjs",
-    "lib",
+    "src",
     "bin",
     "completion",
     "gulp.1"
