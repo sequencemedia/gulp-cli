@@ -30,7 +30,7 @@
     "prepare": "husky install"
   },
   "bin": {
-    "gulp": "bin/gulp.mjs"
+    "gulp": "./bin/gulp.mjs"
   },
   "dependencies": {
     "@sequencemedia/gulp-log": "^1.0.31",
