@@ -80,5 +80,8 @@
     "#gulp-cli/src/*": "./src/*.mjs",
     "#gulp-cli": "./index.mjs",
     "#where-am-i": "./where-am-i.mjs"
+  },
+  "exports": {
+    ".": "./index.mjs"
   }
 }
