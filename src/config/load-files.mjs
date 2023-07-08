@@ -1,4 +1,9 @@
+import {
+  pathToFileURL
+} from 'node:url'
+
 import copyProps from 'copy-props'
+
 import {
   join,
   extname,
@@ -24,10 +29,12 @@ export default async function loadConfigFiles (configFiles = {}, configFileOrder
     const filePath = configFiles[key]
 
     try {
+      const fileUrl = pathToFileURL(resolve(join(process.cwd(), filePath)))
+
       const module = (
         extname(filePath) === '.json'
-          ? await import(resolve(join(process.cwd(), filePath)), { assert: { type: 'json' } })
-          : await import(resolve(join(process.cwd(), filePath)))
+          ? await import(fileUrl, { assert: { type: 'json' } })
+          : await import(fileUrl)
       )
 
       copyProps(getConfig(module), config, ({ keyChain, value }) => {

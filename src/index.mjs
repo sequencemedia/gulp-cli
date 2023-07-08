@@ -1,3 +1,7 @@
+import {
+  pathToFileURL
+} from 'node:url'
+
 import stdout from 'mute-stdout'
 
 import listenForGulpEvents from './log/listen-for-gulp-events.mjs'
@@ -13,8 +17,10 @@ function getImportFromModulePath (params) {
     }
   } = params
 
+  const fileUrl = pathToFileURL(modulePath)
+
   return (
-    import(modulePath)
+    import(fileUrl)
       .then(({ default: gulp }) => Object.assign(params, { gulp }))
   )
 }
@@ -26,8 +32,10 @@ function getImportFromConfigPath (params) {
     }
   } = params
 
+  const fileUrl = pathToFileURL(configPath)
+
   return (
-    import(configPath)
+    import(fileUrl)
       .then((tasks) => Object.assign(params, { tasks }))
   )
 }

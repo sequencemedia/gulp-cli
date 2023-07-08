@@ -1,4 +1,8 @@
 import {
+  pathToFileURL
+} from 'node:url'
+
+import {
   join
 } from 'node:path'
 
@@ -7,11 +11,14 @@ import exit from './exit.mjs'
 import ROOT from '#where-am-i'
 
 async function getGulpCliVersion () {
+  const fileUrl = pathToFileURL(join(ROOT, 'package.json'))
+
   const {
     default: {
       version
     }
-  } = await import(join(ROOT, 'package.json'), { assert: { type: 'json' } })
+  } = await import(fileUrl, { assert: { type: 'json' } })
+
   return version
 }
 
