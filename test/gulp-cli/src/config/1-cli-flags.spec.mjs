@@ -1,9 +1,6 @@
-import chai from 'chai'
+import { expect } from 'chai'
 
 import mergeConfig from '#gulp-cli/src/config/cli-flags'
-const {
-  expect
-} = chai
 
 describe('./src/config/cli-flags', () => {
   it('copies only config props specified to cli flags', () => {
