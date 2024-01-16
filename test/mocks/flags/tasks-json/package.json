@@ -1,7 +1,7 @@
 {
   "name": "@sequencemedia/gulp-cli",
-  "type": "module",
   "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "@sequencemedia/gulp": "1.0.0"
   }
