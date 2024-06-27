@@ -33,7 +33,7 @@ export default async function loadConfigFiles (configFiles = {}, configFileOrder
 
       const module = (
         extname(filePath) === '.json'
-          ? await import(fileUrl, { assert: { type: 'json' } })
+          ? await import(fileUrl, { with: { type: 'json' } })
           : await import(fileUrl)
       )
 

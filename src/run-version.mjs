@@ -17,7 +17,7 @@ async function getGulpCliVersion () {
     default: {
       version
     }
-  } = await import(fileUrl, { assert: { type: 'json' } })
+  } = await import(fileUrl, { with: { type: 'json' } })
 
   return version
 }
