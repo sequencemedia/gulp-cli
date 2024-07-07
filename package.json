@@ -28,7 +28,7 @@
   "repository": "sequencemedia/gulp-cli",
   "homepage": "https://gulpjs.com",
   "scripts": {
-    "lint": "eslint . --ext .mjs,.cjs",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
     "test": "NODE_OPTIONS=--no-warnings mocha -b --recursive test/gulp-cli"
@@ -59,10 +59,10 @@
     "@babel/eslint-parser": "^7.24.7",
     "@babel/plugin-syntax-import-assertions": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
+    "@sequencemedia/eslint-config-standard": "^0.0.5",
     "@sequencemedia/hooks": "^1.0.497",
     "chai": "^5.1.1",
-    "eslint": "8.57.0",
-    "eslint-config-standard": "^17.1.0",
+    "eslint": "^9.6.0",
     "husky": "^9.0.11",
     "mocha": "^10.6.0",
     "rimraf": "^5.0.8",
