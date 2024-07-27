@@ -37,7 +37,7 @@
     "gulp": "./bin/gulp.mjs"
   },
   "dependencies": {
-    "@sequencemedia/gulp-log": "^1.0.169",
+    "@sequencemedia/gulp-log": "^1.0.170",
     "@sequencemedia/liftoff": "1.0.0",
     "ansi-colors": "^4.1.3",
     "archy": "^1.0.0",
@@ -60,7 +60,7 @@
     "@babel/plugin-syntax-import-assertions": "^7.24.7",
     "@babel/preset-env": "^7.25.0",
     "@sequencemedia/eslint-config-standard": "^0.0.17",
-    "@sequencemedia/hooks": "^1.0.506",
+    "@sequencemedia/hooks": "^1.0.507",
     "chai": "^5.1.1",
     "eslint": "^9.8.0",
     "globals": "^15.8.0",
