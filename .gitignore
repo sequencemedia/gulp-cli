@@ -12,6 +12,9 @@
 # Deps
 .depsrc
 
+# Hooks
+.husky/hooks
+
 !test/**/node_modules/*
 test/**/node_modules/**/.DS_Store
 
