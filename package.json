@@ -37,7 +37,7 @@
     "gulp": "./bin/gulp.mjs"
   },
   "dependencies": {
-    "@sequencemedia/gulp-log": "^1.0.228",
+    "@sequencemedia/gulp-log": "^1.0.229",
     "@sequencemedia/liftoff": "1.0.0",
     "ansi-colors": "^4.1.3",
     "archy": "^1.0.0",
@@ -55,14 +55,14 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.7",
-    "@babel/eslint-parser": "^7.25.7",
+    "@babel/core": "^7.25.8",
+    "@babel/eslint-parser": "^7.25.8",
     "@babel/plugin-syntax-import-assertions": "^7.25.7",
-    "@babel/preset-env": "^7.25.7",
-    "@sequencemedia/eslint-config-standard": "^0.0.74",
+    "@babel/preset-env": "^7.25.8",
+    "@sequencemedia/eslint-config-standard": "^0.0.75",
     "chai": "^5.1.1",
     "eslint": "^9.12.0",
-    "globals": "^15.10.0",
+    "globals": "^15.11.0",
     "husky": "^9.1.6",
     "mocha": "^10.7.3",
     "rimraf": "^6.0.1",
