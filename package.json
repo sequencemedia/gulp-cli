@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/gulp-cli",
-  "version": "1.1.251",
+  "version": "1.1.252",
   "description": "The command line interface to Gulp",
   "keywords": [
     "build",
