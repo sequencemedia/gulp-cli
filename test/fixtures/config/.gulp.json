@@ -1,0 +1,5 @@
+{
+  "flags": {
+    "gulpfile": "./flags/gulpfile/gulpfile.mjs"
+  }
+}
