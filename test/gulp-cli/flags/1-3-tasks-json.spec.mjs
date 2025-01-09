@@ -10,7 +10,11 @@ import {
   expect
 } from 'chai'
 
-const TASKS_PATTERN = /\{"label":".*","nodes":\[.*\]\}+/
+const TASKS_PATTERN = /\{\s*"label":\s*\".*\",\s*"nodes":\s*\[.*\]\}+/
+
+function toJson (s) {
+  return JSON.stringify(JSON.parse(s), null, 2)
+}
 
 describe('--tasks-json', () => {
   it('prints the tasks', (done) => {
@@ -34,8 +38,8 @@ describe('--tasks-json', () => {
 
         const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-json.json')
 
-        expect(match)
-          .to.equal(TASKS_FIXTURE.toString().trim())
+        expect(toJson(match))
+          .to.equal(toJson(TASKS_FIXTURE.toString().trim()))
 
         done()
       } catch (e) {
@@ -60,8 +64,8 @@ describe('--tasks-json', () => {
 
           const TASKS_FIXTURE = await readFile('./test/expected/flags/tasks-json/compact-tasks.json')
 
-          expect(match)
-            .to.equal(TASKS_FIXTURE.toString().trim())
+          expect(toJson(match))
+            .to.equal(toJson(TASKS_FIXTURE.toString().trim()))
 
           done()
         } catch (e) {
