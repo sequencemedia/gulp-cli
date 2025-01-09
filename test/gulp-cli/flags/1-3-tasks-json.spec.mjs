@@ -10,7 +10,7 @@ import {
   expect
 } from 'chai'
 
-const TASKS_PATTERN = /\{\s*"label":\s*\".*\",\s*"nodes":\s*\[.*\]\}+/
+const TASKS_PATTERN = /\{\s*"label":\s*\".*\",\s*"nodes":\s*\[.*\]\}+/ // eslint-disable-line no-useless-escape
 
 function toJson (s) {
   return JSON.stringify(JSON.parse(s), null, 2)
