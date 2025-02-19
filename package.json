@@ -59,7 +59,7 @@
     "@babel/eslint-parser": "^7.26.8",
     "@babel/plugin-syntax-import-assertions": "^7.26.0",
     "@babel/preset-env": "^7.26.9",
-    "@sequencemedia/eslint-config-standard": "^0.2.24",
+    "@sequencemedia/eslint-config-standard": "^0.2.25",
     "chai": "^5.2.0",
     "eslint": "^9.20.1",
     "globals": "^15.15.0",
