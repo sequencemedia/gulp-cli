@@ -55,10 +55,10 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/eslint-parser": "^7.28.4",
+    "@babel/core": "^7.28.5",
+    "@babel/eslint-parser": "^7.28.5",
     "@babel/plugin-syntax-import-assertions": "^7.27.1",
-    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-env": "^7.28.5",
     "@sequencemedia/eslint-config-standard": "^0.2.96",
     "chai": "^6.2.0",
     "eslint": "^9.38.0",
