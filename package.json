@@ -68,7 +68,6 @@
     "rimraf": "^6.1.2",
     "sinon": "^21.0.1"
   },
-  "man": "gulp.1",
   "files": [
     "index.mjs",
     "where-am-i.mjs",
@@ -77,6 +76,7 @@
     "completion",
     "gulp.1"
   ],
+  "man": "gulp.1",
   "imports": {
     "#gulp-cli": "./index.mjs",
     "#gulp-cli/src/*": "./src/*.mjs",
