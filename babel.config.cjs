@@ -10,8 +10,5 @@ module.exports = {
         corejs: 3
       }
     ]
-  ],
-  plugins: [
-    '@babel/syntax-import-assertions'
   ]
 }

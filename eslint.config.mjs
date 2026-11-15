@@ -1,5 +1,4 @@
 import merge from '@sequencemedia/eslint-config-standard/merge'
-import parser from '@babel/eslint-parser'
 import globals from 'globals'
 
 export default (
@@ -11,11 +10,6 @@ export default (
       'test'
     ],
     languageOptions: {
-      parser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module'
-      },
       globals: {
         fetch: 'readonly',
         ...globals.node
@@ -28,11 +22,6 @@ export default (
           'test/**/*.{cjs,mjs}'
         ],
         languageOptions: {
-          parser,
-          parserOptions: {
-            ecmaVersion: 'latest',
-            sourceType: 'module'
-          },
           globals: {
             fetch: 'readonly',
             ...globals.mocha
