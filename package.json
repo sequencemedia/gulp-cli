@@ -30,7 +30,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky",
+    "prepare": "node husky.mjs",
     "test": "NODE_OPTIONS=--no-warnings mocha -b --recursive test/gulp-cli"
   },
   "bin": {
@@ -59,7 +59,7 @@
     "@babel/eslint-parser": "7.29.7",
     "@babel/plugin-syntax-import-assertions": "7.29.7",
     "@babel/preset-env": "7.29.7",
-    "@sequencemedia/eslint-config-standard": "^0.3.4",
+    "@sequencemedia/eslint-config-standard": "^0.4.0",
     "chai": "^6.3.0",
     "eslint": "9.38.0",
     "globals": "^17.14.0",
